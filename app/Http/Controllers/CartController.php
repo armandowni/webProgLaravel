@@ -88,10 +88,10 @@ class CartController extends Controller
                 $transaction->save();
             }
 
-            foreach ($cart as $c2){
-                $qty = DB::table('products')->where('id_product',$c2->id_product)
-                    ->decrement('product_quantity', $c2->cart_quantity);
-            }
+            // foreach ($cart as $c2){
+            //     $qty = DB::table('products')->where('id_product',$c2->id_product)
+            //         ->decrement('product_quantity', $c2->cart_quantity);
+            // }
 
             DB::table('cart')->where('id_user', $id2)->delete();
             return redirect()->action('ProductController@index');
