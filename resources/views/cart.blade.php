@@ -36,7 +36,7 @@
             </tbody>
                 <tr>
                     <th>
-                        <span>Total</span>
+                        <span>Total Price</span>
                     </th>
                     <th>
                         <span>Rp. {{$total}}</span>
