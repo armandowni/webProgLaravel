@@ -32,7 +32,7 @@
 <body onload="startTime()">
 
     <div id="Login">
-        <div id="Header" class="bg-blue-500 text-white">
+        <div id="Header" class="bg-blue-500 text-white py-3 px-5">
             <div id="login_regis" class="flex justify-between">
                 <div id="Mimi_Shop">
                     <a href="/home">MimiShop</a>
@@ -57,14 +57,16 @@
                     </ul>
                 @else
                     @if ($_SERVER['REQUEST_URI'] != '/register' && $_SERVER['REQUEST_URI'] != '/signin')
-                        <div id="Login_A0_Text_7">
-                            <a href="/signin">Login</a>
-                        </div>
-                        <div id="Register">
-                            <a href="/register">Register</a>
-                        </div>
-                        <div id="_">
-                            <span>|</span>
+                        <div class="flex items-center gap-5">
+                            <div id="Login_A0_Text_7">
+                                <a href="/signin">Login</a>
+                            </div>
+                            <div id="_">
+                                <span>|</span>
+                            </div>
+                            <div id="Register">
+                                <a href="/register">Register</a>
+                            </div>
                         </div>
                     @endif
                 @endif
