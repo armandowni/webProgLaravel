@@ -6,7 +6,7 @@
   @apply font-sans;
 }
 
-.card2 {
+.card {
   @apply relative;
   @apply flex;
   @apply flex-col;

@@ -15,7 +15,7 @@
 				<span><div id="txt"></div>
                     </span>
 			</div>
-			<div id="search">
+			<div id="search" class="border-2 border-gray-300 rounded-lg">
 				<form action="home" method="post">
 					@csrf
 					<input type="text" style="width: 150px" name="search">
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-		<div id="rowBarang">
+		<div id="rowBarang" class="grid grid-cols-3">
             @foreach($products as $p)
 			<div class="column">
 				<div class="card">

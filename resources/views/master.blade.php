@@ -33,7 +33,7 @@
 					<a href="/home">MimiShop</a>
 				</div>
 			@if(Session::get('role') == "User")
-				<ul id="user">
+				<ul id="user" class="flex items-center gap-5">
 					<li><a href="/feedbackUser">Feedback</a></li>
 					<li><a href="/cart">My cart</a></li>
 					<li><a href="/transaction">My Transaction</a></li>
@@ -41,7 +41,7 @@
 					<li><a href="/signout">Logout</a></li>
 				</ul>
 			@elseif (Session::get('role') == "Admin")
-					<ul style="admin">
+					<ul id="admin" class="flex items-center gap-5">
 						<li><a href="/manageFeedback">Manage Feedback</a></li>
 						<li><a href="/manageuser">Manage User</a></li>
 						<li><a href="/managefigure">Manage Figure</a></li>
