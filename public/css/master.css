@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .mediaViewInfo {
     --web-view-name: Login;
     --web-view-id: Login;

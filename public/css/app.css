@@ -470,6 +470,10 @@ video {
 .border {
   border-width: 1px;
 }
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -479,6 +483,8 @@ video {
 }
 * {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
 }
 .card2 {
   position: relative;
