@@ -73,7 +73,10 @@
             </div>
         </div>
 
-        @yield('content')
+        <div class="px-5 py-3">
+
+            @yield('content')
+        </div>
 
         <div id="Footer" style="bottom: 0%">
             <div id="ID2019_Copyright__Bluejack_17_">
