@@ -21,13 +21,14 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./docker/nginx:/etc/nginx/conf.d
-      - .:/var/www
-      - /etc/letsencrypt/live/myserver.armandowni.com:/etc/nginx/ssl:ro
+      - ./docker/nginx:/etc/nginx/conf.d        # Nginx configs
+      - .:/var/www                              # Laravel app
+      - /etc/letsencrypt/live/myserver.armandowni.com:/etc/nginx/ssl:ro  # SSL certs
     depends_on:
       - app
     networks:
       - laravel
+
 
   mysql:
     image: mysql:8.0
