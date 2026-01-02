@@ -29,8 +29,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         // Force HTTPS for all URLs if not in local
-        if (env('APP_ENV') !== 'local') {
-            URL::forceScheme('https');
-        }
+        // if (env('APP_ENV') !== 'local') {
+        //     URL::forceScheme('https');
+        // }
     }
 }
