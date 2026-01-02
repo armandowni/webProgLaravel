@@ -24,6 +24,8 @@ services:
       - ./docker/nginx:/etc/nginx/conf.d
       - ./docker/nginx/ssl:/etc/nginx/ssl
       - .:/var/www
+      # Add this line to mount Let's Encrypt certs from host
+      - /etc/letsencrypt/live/myserver.armandowni.com:/etc/nginx/ssl:ro
     depends_on:
       - app
     networks:
