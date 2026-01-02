@@ -2,8 +2,8 @@
 
 @section('title', 'Home')
 @section('content')
-    <div id="containerbarang">
-        <div class="left">
+    <div id="containerbarang" class="flex items-center gap-3">
+        <div class="w-[30%]">
             <div id="Welcome">
                 <span>Welcome</span>
                 <span>{{ $user }},</span>
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 flex-1">
             @foreach ($products as $p)
                 <div class="card">
                     <img src="storage/{{ $p->product_image }}" alt="Tidak dapat memuat">

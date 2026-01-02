@@ -467,6 +467,12 @@ video {
 .hidden {
   display: none;
 }
+.w-\[30\%\] {
+  width: 30%;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -475,6 +481,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .gap-5 {
   gap: 1.25rem;
