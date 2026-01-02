@@ -12,6 +12,7 @@ services:
       - mysql
     networks:
       - laravel
+    command: php-fpm
 
   nginx:
     image: nginx:alpine
@@ -32,15 +33,16 @@ services:
     environment:
       MYSQL_DATABASE: laraveldb
       MYSQL_USER: duckcanfly
-      MYSQL_PASSWORD: duck4rm4nd0
-      MYSQL_ROOT_PASSWORD: duckcanfly@laravel
+      MYSQL_PASSWORD: strongpassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    command: --innodb-buffer-pool-size=128M
     volumes:
       - dbdata:/var/lib/mysql
     networks:
       - laravel
 
-networks:
-  laravel:
-
 volumes:
   dbdata:
+
+networks:
+  laravel:
