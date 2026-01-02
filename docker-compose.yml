@@ -33,8 +33,8 @@ services:
     environment:
       MYSQL_DATABASE: laraveldb
       MYSQL_USER: duckcanfly
-      MYSQL_PASSWORD: strongpassword
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_PASSWORD: duck4rm4nd0
+      MYSQL_ROOT_PASSWORD: duckcanfly@laravel
     command: --innodb-buffer-pool-size=128M
     volumes:
       - dbdata:/var/lib/mysql
