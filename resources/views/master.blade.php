@@ -28,7 +28,7 @@
 
 <div id="Login">
 		<div id="Header" class="bg-blue-500 text-white">
-			<div id="login_regis">
+			<div id="login_regis" class="flex justify-between">
 				<div id="Mimi_Shop">
 					<a href="/home">MimiShop</a>
 				</div>
