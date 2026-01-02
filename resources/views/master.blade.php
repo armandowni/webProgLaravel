@@ -26,7 +26,7 @@
 </head>
 <body onload="startTime()">
 
-<div id="Login" class="bg-red-500">
+<div id="Login">
 		<div id="Header">
 			<div id="login_regis">
 				<div id="Mimi_Shop">
