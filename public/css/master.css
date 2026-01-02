@@ -15,10 +15,10 @@
 }
 #Login {
     position: absolute;
-    background: #E5E5E5;
+    background: #e5e5e5;
     width: 100%;
     height: 693px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     overflow: hidden;
     --web-view-name: Login;
     --web-view-id: Login;
@@ -26,14 +26,12 @@
     --web-enable-deep-linking: true;
 }
 @keyframes fadein {
-
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-
 }
 
 /* footer dan header */
@@ -58,8 +56,12 @@
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
-    color: rgba(255,255,255,1);
-}#Header {
+    color: rgba(255, 255, 255, 1);
+}
+#Header {
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
     position: absolute;
     width: 100%;
     height: 94px;
@@ -76,7 +78,7 @@
     top: 28px;
     overflow: visible;
 }
-#Login_A0_Text_7 a{
+#Login_A0_Text_7 a {
     position: absolute;
     text-decoration: none;
     left: 809px;
@@ -89,9 +91,9 @@
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
-#Register a{
+#Register a {
     position: absolute;
     text-decoration: none;
     left: 917px;
@@ -108,7 +110,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
 #_ {
     position: absolute;
@@ -122,9 +124,9 @@
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
-#Mimi_Shop a{
+#Mimi_Shop a {
     text-decoration: none;
     position: absolute;
     /* left: 200px; */
@@ -137,9 +139,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
-
 
 /* container login */
 #container {
@@ -192,7 +193,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
 #remmber_me {
     position: absolute;
@@ -214,18 +215,17 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(1,1,1,1);
+    color: rgba(1, 1, 1, 1);
 }
-#password{
+#password {
     position: absolute;
     width: 613px;
     height: 47px;
     left: 30px;
     top: 162px;
     overflow: visible;
-
 }
-#Password input{
+#Password input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -238,7 +238,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #username {
     position: absolute;
@@ -262,7 +262,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #Sign_In {
     position: absolute;
@@ -276,10 +276,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
-
-
 
 /* container register */
 #container1 {
@@ -334,7 +332,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    color: rgba(1,1,1,1);
+    color: rgba(1, 1, 1, 1);
 }
 .Pp {
     position: absolute;
@@ -364,7 +362,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
 }
 #pp {
     position: absolute;
@@ -378,7 +376,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
 }
 #gender {
     position: absolute;
@@ -388,7 +386,7 @@
     top: 280px;
     overflow: visible;
 }
-#gender_A1_Text_6 select{
+#gender_A1_Text_6 select {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -401,9 +399,9 @@
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
-#phone{
+#phone {
     position: absolute;
     width: 613px;
     height: 47px;
@@ -411,7 +409,7 @@
     top: 240px;
     overflow: visible;
 }
-#phone1 input{
+#phone1 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -424,7 +422,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #address1 {
     position: absolute;
@@ -434,7 +432,7 @@
     top: 200px;
     overflow: visible;
 }
-#Password1 input{
+#Password1 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -447,7 +445,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #Confirm_password1 {
     position: absolute;
@@ -457,7 +455,7 @@
     top: 160px;
     overflow: visible;
 }
-#Password_A1_Text_8 input{
+#Password_A1_Text_8 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -470,7 +468,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #password1 {
     position: absolute;
@@ -480,7 +478,7 @@
     top: 120px;
     overflow: visible;
 }
-#Password_A1_Text_9 input{
+#Password_A1_Text_9 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -493,9 +491,9 @@
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
-#email1{
+#email1 {
     position: absolute;
     width: 613px;
     height: 47px;
@@ -516,7 +514,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #fullname {
     position: absolute;
@@ -526,7 +524,7 @@
     top: 40px;
     overflow: visible;
 }
-#Fullname input{
+#Fullname input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -539,7 +537,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
 #Sign_Up {
     position: absolute;
@@ -553,10 +551,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
-    color: rgba(88,87,87,1);
+    color: rgba(88, 87, 87, 1);
 }
-
-
 
 /* container barang */
 #containerbarang {
@@ -565,8 +561,8 @@
     left: 300px;
     top: 126.716px;
     overflow: visible;
-  }
-  #Welcome {
+}
+#Welcome {
     position: absolute;
     left: 0px;
     top: 29.284px;
@@ -578,53 +574,53 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(0,0,0,1);
-  }
-  #rowBarang {
+    color: rgba(0, 0, 0, 1);
+}
+#rowBarang {
     display: table;
     float: left;
     position: absolute;
     left: 190px;
     top: 0px;
     overflow: visible;
-  }
-  .column {
+}
+.column {
     float: left;
     padding: 0 20px;
-  }
-  .card {
+}
+.card {
     border: 1px solid black;
     width: 160px;
     height: 450px;
     text-align: center;
     background-color: #f1f1f1;
-  }
-  .card img{
+}
+.card img {
     /* border-top: 1px solid black; */
     width: 100%;
     height: 200px;
-  }
-  .card #isi{
+}
+.card #isi {
     position: absolute;
     text-align: left;
-    top: 210px
-  }
-  .card #bawah{
+    top: 210px;
+}
+.card #bawah {
     width: 160px;
-    border-top:1px solid black;
+    border-top: 1px solid black;
     position: absolute;
     bottom: 10px;
     text-align: left;
-  }
-  .card #bawah button{
+}
+.card #bawah button {
     width: 150px;
     /* border-top:1px solid black; */
     position: absolute;
     left: 5px;
     bottom: 0px;
     text-align: left;
-  }
-  #Current_time {
+}
+#Current_time {
     position: absolute;
     left: 0px;
     top: 56.284px;
@@ -636,9 +632,9 @@
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    color: rgba(0,0,0,1);
-  }
-  #Mimi_Figure_Shop {
+    color: rgba(0, 0, 0, 1);
+}
+#Mimi_Figure_Shop {
     position: absolute;
     left: 0px;
     top: 78.284px;
@@ -650,48 +646,41 @@
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
-    color: rgba(0,0,0,1);
-  }
-#search{
-  position: absolute;
-  top: 160px;
+    color: rgba(0, 0, 0, 1);
+}
+#search {
+    position: absolute;
+    top: 160px;
 }
 
-
-
-
-  /* navbar member */
-  #login_regis ul{
+/* navbar member */
+#login_regis ul {
     display: inline-block;
-		position: relative;
-		left: 250px;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-	}
-	#login_regis ul li {
-  		float: left;
-	}
-	#login_regis li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 0px 10px;
-	text-decoration: none;
-	font-size: 20px;
-  }
-ul#user{
-  position: absolute;
-  left: 550px;
+    position: relative;
+    left: 250px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+#login_regis ul li {
+    float: left;
+}
+#login_regis li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+ul#user {
+    position: absolute;
+    left: 550px;
 }
 
-
-
-
-
-  /* container insert */
-  #containerInsert {
+/* container insert */
+#containerInsert {
     position: absolute;
     width: 432px;
     height: 470px;
@@ -699,27 +688,27 @@ ul#user{
     top: 100px;
     border: 1px solid black;
     overflow: visible;
-  }
-  #Button_Sign_in {
+}
+#Button_Sign_in {
     position: absolute;
     width: 402px;
     height: 31px;
     left: 18px;
     top: 421px;
     overflow: visible;
-  }
-  #INSERT button{
-      position: absolute;
-      overflow: visible;
-      width: 400px;
-      height: 40px;
-      left: 0px;
-      top: 0px;
-      background-color: blue;
-      color: white;
-      font-size: 20px;
-  }
-  #INSERT text{
+}
+#INSERT button {
+    position: absolute;
+    overflow: visible;
+    width: 400px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
+#INSERT text {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -731,25 +720,25 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(255,255,255,1);
-  }
-  #Pp {
+    color: rgba(255, 255, 255, 1);
+}
+#Pp {
     position: absolute;
     width: 110px;
     height: 48px;
     left: 20px;
     top: 350px;
     overflow: visible;
-  }
-  #button_browse {
+}
+#button_browse {
     position: absolute;
     width: 88px;
     height: 24px;
     left: 0px;
     top: 24px;
     overflow: visible;
-  }
-  #Browse___ {
+}
+#Browse___ {
     position: absolute;
     left: 0px;
     top: 2px;
@@ -761,9 +750,9 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    color: rgba(0,0,0,1);
-  }
-  #pp {
+    color: rgba(0, 0, 0, 1);
+}
+#pp {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -775,17 +764,17 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    color: rgba(0,0,0,1);
-  }
-  #category {
+    color: rgba(0, 0, 0, 1);
+}
+#category {
     position: absolute;
     width: 401px;
     height: 31px;
     left: 18px;
     top: 260px;
     overflow: visible;
-  }
-  #category select{
+}
+#category select {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -798,16 +787,16 @@ ul#user{
     font-weight: normal;
     font-size: 20px;
     /* color: rgba(88,87,87,1); */
-  }
-  #role {
+}
+#role {
     position: absolute;
     width: 401px;
     height: 31px;
     left: 9px;
     top: 150px;
     overflow: visible;
-  }
-  #role select{
+}
+#role select {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -820,16 +809,16 @@ ul#user{
     font-weight: normal;
     font-size: 20px;
     /* color: rgba(88,87,87,1); */
-  }
-  #price {
+}
+#price {
     position: absolute;
     width: 401px;
     height: 31px;
     left: 18px;
     top: 220px;
     overflow: visible;
-  }
-  #category_A2_Text_6 input{
+}
+#category_A2_Text_6 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -841,17 +830,17 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
-  }
-  #quantity {
+    color: rgba(88, 87, 87, 1);
+}
+#quantity {
     position: absolute;
     width: 401px;
     height: 31px;
     left: 18px;
     top: 180px;
     overflow: visible;
-  }
-  #category_A2_Text_7 input{
+}
+#category_A2_Text_7 input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -863,17 +852,17 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
-  }
-  #descfig {
+    color: rgba(88, 87, 87, 1);
+}
+#descfig {
     position: absolute;
     width: 401px;
     height: 100px;
     left: 18px;
     top: 95px;
     overflow: visible;
-  }
-  #Decription textarea{
+}
+#Decription textarea {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -886,17 +875,17 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
-  }
-  #figurename {
+    color: rgba(88, 87, 87, 1);
+}
+#figurename {
     position: absolute;
     width: 613px;
     height: 47px;
     left: 18px;
     top: 50px;
     overflow: visible;
-  }
-  #Figurename input{
+}
+#Figurename input {
     position: absolute;
     left: 0px;
     top: 3px;
@@ -908,9 +897,9 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    color: rgba(88,87,87,1);
-  }
-  #Insert_Figure {
+    color: rgba(88, 87, 87, 1);
+}
+#Insert_Figure {
     position: absolute;
     left: 140px;
     top: 5px;
@@ -922,14 +911,11 @@ ul#user{
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
-    color: rgba(88,87,87,1);
-  }
+    color: rgba(88, 87, 87, 1);
+}
 
-
-
-
-  /* container update */
-  #containerUpdate {
+/* container update */
+#containerUpdate {
     position: absolute;
     width: 432px;
     height: 470px;
@@ -937,371 +923,360 @@ ul#user{
     top: 100px;
     border: 1px solid black;
     overflow: visible;
-  }
+}
 
-  /* container detail */
-  #container_detail {
-		position: absolute;
-		width: 1349px;
-		height: 579px;
-		left: 0px;
-		top: 94px;
-		overflow: visible;
-	}
-	.kanan {
-		overflow: visible;
-		position: absolute;
-		width: 230.267px;
-		height: 424px;
-		left: 863.844px;
-		top: 57px;
+/* container detail */
+#container_detail {
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
+}
+.kanan {
+    overflow: visible;
+    position: absolute;
+    width: 230.267px;
+    height: 424px;
+    left: 863.844px;
+    top: 57px;
     /* border: 1px solid black; */
-  }
-  .kanan ul {
-		overflow: visible;
+}
+.kanan ul {
+    overflow: visible;
     position: absolute;
     width: 10px;
-		left: 30px;
-		top: 57px;
-	}
-	#Figure_Description {
-		position: absolute;
-		/* left: 874px; */
-		/* top: 66px; */
-		overflow: visible;
+    left: 30px;
+    top: 57px;
+}
+#Figure_Description {
+    position: absolute;
+    /* left: 874px; */
+    /* top: 66px; */
+    overflow: visible;
     width: 350px;
     height: 150px;
-		text-align: left;
-		font-family: Segoe UI;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-    color: rgba(0,0,0,1);
-  }
-  #Figure_Description p{
-		position: absolute;
-		/* left: 874px; */
-		/* top: 66px; */
-		overflow: visible;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+#Figure_Description p {
+    position: absolute;
+    /* left: 874px; */
+    /* top: 66px; */
+    overflow: visible;
     width: 350px;
     height: 150px;
-		text-align: justify;
-		font-family: Segoe UI;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 5px;
-    color: rgba(0,0,0,1);
-  }
-	#Figure_Detail {
-		position: absolute;
-		/* left: 874px; */
-		top: 170px;
-		overflow: visible;
-		width: 113px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Segoe UI;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(0,0,0,1);
-	}
-	.Rectangle_12 {
-		position: absolute;
-		overflow: visible;
-		width: 322px;
-		height: 424px;
-		left: 302px;
-		top: 57px;
+    text-align: justify;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5px;
+    color: rgba(0, 0, 0, 1);
+}
+#Figure_Detail {
+    position: absolute;
+    /* left: 874px; */
+    top: 170px;
+    overflow: visible;
+    width: 113px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+.Rectangle_12 {
+    position: absolute;
+    overflow: visible;
+    width: 322px;
+    height: 424px;
+    left: 302px;
+    top: 57px;
     border: 1px solid black;
-    }
-
+}
 
 /* container feedback */
 #container_feedback {
-  position: absolute;
-  width: 1349px;
-  height: 579px;
-  left: 0px;
-  top: 94px;
-  overflow: visible;
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
 }
 #container_feedback .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  left: 550px;
-  top: 57px;
-  border: 1px solid black;
+    overflow: visible;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 550px;
+    top: 57px;
+    border: 1px solid black;
 }
-.judul{
+.judul {
     position: relative;
     left: 70px;
     top: 10px;
     text-align: left;
     font-size: 25px;
-  }
-textarea{
-  position: relative;
-  width: 250px;
-  height: 50px;
-  left: 26px;
-  top: 20px;
+}
+textarea {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    left: 26px;
+    top: 20px;
 }
 #container_feedback button {
-  position: absolute;
-  left: 26px;
-  top: 150px;
-  overflow: visible;
-  width: 250px;
-  /* white-space: nowrap; */
-  text-align: center;
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  color: rgba(0,0,0,1);
+    position: absolute;
+    left: 26px;
+    top: 150px;
+    overflow: visible;
+    width: 250px;
+    /* white-space: nowrap; */
+    text-align: center;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 1);
 }
-
 
 /* container insert category */
 #container_insertcat {
-  position: absolute;
-  width: 1349px;
-  height: 579px;
-  left: 0px;
-  top: 94px;
-  overflow: visible;
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
 }
 #container_insertcat .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  left: 550px;
-  top: 57px;
-  border: 1px solid black;
+    overflow: visible;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 550px;
+    top: 57px;
+    border: 1px solid black;
 }
-.judul{
+.judul {
     position: relative;
     left: 70px;
     top: 10px;
     text-align: left;
     font-size: 25px;
-  }
-#container_insertcat input{
-  position: relative;
-  width: 250px;
-  height: 50px;
-  left: 26px;
-  top: 20px;
+}
+#container_insertcat input {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    left: 26px;
+    top: 20px;
 }
 
 #container_insertcat button {
-  position: absolute;
-  left: 26px;
-  top: 150px;
-  overflow: visible;
-  width: 250px;
-  /* white-space: nowrap; */
-  text-align: center;
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  color: rgba(0,0,0,1);
+    position: absolute;
+    left: 26px;
+    top: 150px;
+    overflow: visible;
+    width: 250px;
+    /* white-space: nowrap; */
+    text-align: center;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 1);
 }
-
-
-
 
 /* container cart */
 #container_cart {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  left: 0px;
-  top: 94px;
-  overflow: visible;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
 }
 #container_cart .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
 }
-#tablecart{
+#tablecart {
     position: relative;
     left: 35px;
     top: 10px;
     text-align: center;
     font-size: 30px;
-
 }
-#tablecart th{
+#tablecart th {
     padding: 10px 50px;
 }
 
-
 /* container transaction */
 #container_transaction {
-  position: absolute;
-  width: 1349px;
-  height: 579px;
-  left: 0px;
-  top: 94px;
-  overflow: visible;
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
 }
 .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 1394px;
-  height: 400px;
-  left: 0px;
-  top: 0px;
+    overflow: visible;
+    position: absolute;
+    width: 1394px;
+    height: 400px;
+    left: 0px;
+    top: 0px;
 }
-  #tabletransaction{
-      position: relative;
-      left: 35px;
-      top: 10px;
-      text-align: center;
-      font-size: 30px;
-      /* border: 1px solid black; */
-  }
-  #tabletransaction th{
-      padding: 10px 10px;
-  }
+#tabletransaction {
+    position: relative;
+    left: 35px;
+    top: 10px;
+    text-align: center;
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+#tabletransaction th {
+    padding: 10px 10px;
+}
 
 /* container admin */
 #container_transactionadmin {
-  position: absolute;
-  width: 1349px;
-  height: 579px;
-  left: 0px;
-  top: 94px;
-  overflow: visible;
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
 }
 #tabletransactionadmin .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 1394px;
-  height: 400px;
-  left: 0px;
-  top: 0px;
+    overflow: visible;
+    position: absolute;
+    width: 1394px;
+    height: 400px;
+    left: 0px;
+    top: 0px;
 }
 #container_transactionadmin .tengah #atas {
-  /* overflow: visible; */
-  position: absolute;
-  left: 100px;
-  top: 10px;
+    /* overflow: visible; */
+    position: absolute;
+    left: 100px;
+    top: 10px;
 }
-  #tabletransactionadmin{
-      position: relative;
-      left: 100px;
-      top: 100px;
-      text-align: center;
-      font-size: 30px;
-      /* border: 1px solid black; */
-  }
-  #tabletransactionadmin th{
-      padding: 10px 20px;
-  }
-
-
+#tabletransactionadmin {
+    position: relative;
+    left: 100px;
+    top: 100px;
+    text-align: center;
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+#tabletransactionadmin th {
+    padding: 10px 20px;
+}
 
 /* container manage feedback */
-  #container_managefeedback{
-		position: absolute;
-		width: 1349px;
-		height: 100%;
-		left: 0px;
-		top: 94px;
-		overflow: visible;
-	}
-  #container_managefeedback	.tengah {
-		overflow: visible;
-		position: absolute;
-		width: 1394px;
-		height: 400px;
-		left: 25%;
-		top: 0px;
-	}
-    #tablemanagefeedback{
-        position: absolute;
-        left: 35px;
-        top: 10px;
-        text-align: left;
-        font-size: 30px;
-        /* border: 1px solid black; */
-    }
-    #tablemanagefeedback th{
-        padding: 10px 10px;
-    }
-
-
+#container_managefeedback {
+    position: absolute;
+    width: 1349px;
+    height: 100%;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
+}
+#container_managefeedback .tengah {
+    overflow: visible;
+    position: absolute;
+    width: 1394px;
+    height: 400px;
+    left: 25%;
+    top: 0px;
+}
+#tablemanagefeedback {
+    position: absolute;
+    left: 35px;
+    top: 10px;
+    text-align: left;
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+#tablemanagefeedback th {
+    padding: 10px 10px;
+}
 
 /* container manage figure */
-#container_managefigure{
-      position: absolute;
-      width: 1349px;
-      height: 0px;
-      left: 0px;
-      top: 94px;
+#container_managefigure {
+    position: absolute;
+    width: 1349px;
+    height: 0px;
+    left: 0px;
+    top: 94px;
 }
 #container_managefigure .tengah {
-      overflow: visible;
-      position: absolute;
-      width: 1394px;
-      height: 400px;
-      /* left: 100px; */
-      top: 10px;
+    overflow: visible;
+    position: absolute;
+    width: 1394px;
+    height: 400px;
+    /* left: 100px; */
+    top: 10px;
 }
-.insertbtn{
-  position: relative;
-  left: 50px;
+.insertbtn {
+    position: relative;
+    left: 50px;
 }
-#tablemanagefigure{
-  position: relative;
-  width: 50%;
-  height: 10px;
-  /* left: 10%; */
-  /* top: 10px; */
-  text-align: left;
-  font-size: 30px; 
+#tablemanagefigure {
+    position: relative;
+    width: 50%;
+    height: 10px;
+    /* left: 10%; */
+    /* top: 10px; */
+    text-align: left;
+    font-size: 30px;
 }
-#tablemanagefigure th{
-  padding: 10px 20px;
+#tablemanagefigure th {
+    padding: 10px 20px;
 }
 
 /* all table */
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 /* container manage user */
-#container_manageuser{
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 94px;
+#container_manageuser {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 94px;
 }
 #container_manageuser .tengah {
-  overflow: visible;
-  position: absolute;
-  width: 1394px;
-  /* height: 400px; */
-  left: 0px;
-  top: 0px;
+    overflow: visible;
+    position: absolute;
+    width: 1394px;
+    /* height: 400px; */
+    left: 0px;
+    top: 0px;
 }
-.insertbtnuser{
-  position: relative;
-  left: 50px;
-  top: 10px;
+.insertbtnuser {
+    position: relative;
+    left: 50px;
+    top: 10px;
 }
-#tablemanageuser{
+#tablemanageuser {
     position: absolute;
     width: 50%;
     /* height: 100%; */
@@ -1311,48 +1286,47 @@ tr:nth-child(even) {
     font-size: 30px;
     overflow: auto;
 }
-#tablemanageuser th{
-      padding: 10px 15px;
+#tablemanageuser th {
+    padding: 10px 15px;
 }
 
-
-
-
-  /* container manage category */
-  #container_managecategory{
-		position: absolute;
-		width: 1349px;
-		height: 579px;
-		left: 0px;
-		top: 94px;
-		overflow: visible;
-	}
-	#container_managecategory .tengah {
-		overflow: visible;
-		position: absolute;
-		width: 100%;
-		height: 400px;
-		left: 28%;
-		top: 10%;
-	}
-#tablemanagecategory{
+/* container manage category */
+#container_managecategory {
+    position: absolute;
+    width: 1349px;
+    height: 579px;
+    left: 0px;
+    top: 94px;
+    overflow: visible;
+}
+#container_managecategory .tengah {
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 28%;
+    top: 10%;
+}
+#tablemanagecategory {
     position: relative;
     left: 100px;
     top: 10px;
     text-align: left;
     font-size: 30px;
 }
-  #tablemanagecategory th{
+#tablemanagecategory th {
     padding: 10px 20px;
 }
 
-  /*error*/
-.isa_info, .isa_success, .isa_warning, .isa_error {
+/*error*/
+.isa_info,
+.isa_success,
+.isa_warning,
+.isa_error {
     margin: 10px 0px;
-    padding:12px;
-
+    padding: 12px;
 }
 .isa_error {
-    color: #D8000C;
-    background-color: #FFD2D2;
+    color: #d8000c;
+    background-color: #ffd2d2;
 }
