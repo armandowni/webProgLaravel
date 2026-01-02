@@ -24,14 +24,11 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: laravel_mysql
     environment:
       MYSQL_DATABASE: laraveldb
       MYSQL_USER: duckcanfly
       MYSQL_PASSWORD: duck4rm4nd0
       MYSQL_ROOT_PASSWORD: duckcanfly@laravel
-    volumes:
-      - dbdata:/var/lib/mysql
 
 volumes:
   dbdata:
