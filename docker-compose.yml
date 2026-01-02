@@ -21,10 +21,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - .:/var/www                   # your Laravel app code
-      - ./docker/nginx:/etc/nginx/conf.d  # your nginx config
-      - /etc/letsencrypt/live/myserver.armandowni.com/fullchain.pem:/etc/nginx/ssl/fullchain.pem:ro
-      - /etc/letsencrypt/live/myserver.armandowni.com/privkey.pem:/etc/nginx/ssl/privkey.pem:ro
+      - ./docker/nginx:/etc/nginx/conf.d
+      - ./docker/nginx/ssl:/etc/nginx/ssl
+      - .:/var/www
     depends_on:
       - app
     networks:
