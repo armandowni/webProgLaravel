@@ -10,10 +10,10 @@
   @apply relative;
   @apply flex;
   @apply flex-col;
-  @apply rounded-large;
+  /* @apply rounded-large; */
   @apply border;
   @apply border-0;
-  @apply shadow-small;
+  /* @apply shadow-small; */
   @apply transition-all;
   @apply duration-150;
   @apply ease-in-out;
@@ -171,14 +171,14 @@ input {
 
 .cardBasic {
   @apply !shadow-none;
-  @apply !border-1;
+  /* @apply !border-1; */
   @apply !bg-white;
   @apply !border-gray-300;
 }
 
 [data-slot="input-wrapper"] {
   @apply !shadow-none;
-  @apply !border-1;
+  /* @apply !border-1; */
   @apply !bg-white;
   @apply !border-gray-300;
 }
@@ -198,7 +198,7 @@ button:disabled {
 }
 [data-slot="mainWrapper"] > [data-slot="trigger"] {
   @apply !shadow-none;
-  @apply !border-1;
+  /* @apply !border-1; */
   @apply !bg-white;
   @apply !border-gray-300;
 }
