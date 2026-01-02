@@ -4,6 +4,7 @@
 
 * {
   @apply font-sans;
+  @apply bg-red-500
 }
 
 .card2 {
