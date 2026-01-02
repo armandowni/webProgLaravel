@@ -1,3 +1,257 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply font-sans;
+}
+
+.card2 {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply rounded-large;
+  @apply border;
+  @apply border-0;
+  @apply shadow-small;
+  @apply transition-all;
+  @apply duration-150;
+  @apply ease-in-out;
+}
+
+input {
+  @apply !outline-none;
+}
+
+.text-warning-foreground,
+.text-success-foreground,
+.text-danger-foreground {
+  @apply text-white;
+}
+
+.text-danger {
+  @apply !text-red-500;
+}
+
+.step1 {
+  @apply bg-gradient-to-b;
+  @apply from-[#028ED5];
+  @apply to-[#01476A];
+}
+.step2 {
+  @apply bg-gradient-to-b;
+  @apply from-[#964D9C];
+  @apply to-[#56175D];
+}
+
+.bg-gradient-red {
+  background-image: linear-gradient(0deg, #490b20 0%, #772845 100%);
+  background-color: transparent; /* This handles the 'transparent' part */
+}
+.step3 {
+  background: linear-gradient(180deg, #1b9ad7 0%, #016394 100%);
+  opacity: 1;
+}
+
+.btnIconWhite path {
+  @apply text-white;
+}
+.btnIconBlack path {
+  @apply text-black;
+}
+
+.btnIconBinusOrange path {
+  @apply text-[#F18700];
+}
+.binusColorText {
+  @apply text-[#F18700];
+}
+.binusColorBg {
+  @apply text-white;
+  @apply bg-[#F18700];
+}
+
+.txt-label {
+  @apply !text-gray-400;
+  @apply !uppercase;
+  @apply !text-sm;
+}
+
+.txt-label2 {
+  @apply !font-bold;
+  @apply !uppercase;
+  @apply !text-gray-400;
+  @apply !text-[12px];
+}
+
+.baseCardBinus {
+  @apply !border-2;
+  @apply !shadow-none;
+  @apply !border-gray-300;
+  @apply !bg-gray-50;
+}
+
+.baseCardBodyBinus {
+  @apply !bg-gray-50;
+}
+
+.baseWhiteCardBinus {
+  @apply !border-2;
+  @apply !shadow-none;
+  @apply !border-gray-300;
+  @apply !bg-white;
+}
+
+.radioWhite {
+  @apply !bg-white;
+  @apply border-gray-400;
+}
+
+.flexLabel {
+  @apply flex;
+  @apply items-center;
+  @apply gap-3;
+  @apply !text-[18pt];
+  @apply md:!text-[20pt];
+}
+
+.flexTxtLabel {
+  @apply flex;
+  @apply flex-col;
+  @apply sm:flex-row;
+  @apply gap-3;
+}
+
+.btnCircleIcon {
+  @apply !items-center;
+  @apply !justify-center;
+  @apply !rounded-full;
+  @apply !size-10;
+  @apply !p-5;
+}
+
+.modalHeader {
+  @apply !border-b-2;
+  @apply !border-gray-200;
+}
+.modalFooter {
+  @apply !border-t-2;
+  @apply !border-gray-200;
+}
+
+.btnSubmitRight {
+  @apply flex;
+  @apply items-center;
+  @apply justify-end;
+  @apply gap-3;
+  @apply !px-5;
+  @apply !mt-2;
+}
+
+.cardBinus {
+  @apply !border-2;
+  @apply !shadow-none;
+  @apply !bg-gray-50;
+}
+
+.flexResponsiveDiv {
+  @apply w-full;
+  @apply flex;
+  @apply flex-col;
+  @apply gap-5;
+  @apply md:flex-row;
+}
+
+.gridTxtLabel {
+  @apply grid;
+  @apply grid-cols-1;
+  @apply md:grid-cols-2;
+  @apply lg:grid-cols-3;
+}
+
+.cardBasic {
+  @apply !shadow-none;
+  @apply !border-1;
+  @apply !bg-white;
+  @apply !border-gray-300;
+}
+
+[data-slot="input-wrapper"] {
+  @apply !shadow-none;
+  @apply !border-1;
+  @apply !bg-white;
+  @apply !border-gray-300;
+}
+
+[data-disabled="true"] [data-slot="input-wrapper"],
+[data-disabled="true"] input,
+[data-disabled="true"] select,
+[data-disabled="true"] textarea,
+[disabled],
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+  @apply !bg-[#D6D6D6];
+  cursor: not-allowed !important;
+  pointer-events: auto !important;
+}
+[data-slot="mainWrapper"] > [data-slot="trigger"] {
+  @apply !shadow-none;
+  @apply !border-1;
+  @apply !bg-white;
+  @apply !border-gray-300;
+}
+
+[data-disabled="true"] [data-slot="mainWrapper"] > [data-slot="trigger"],
+[data-disabled="true"] [data-slot="mainWrapper"] button {
+  @apply !bg-[#D6D6D6];
+  cursor: not-allowed !important;
+}
+
+/* Ensure disabled elements show not-allowed cursor */
+*:disabled,
+[disabled],
+[data-disabled="true"],
+[data-disabled="true"] *,
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+  cursor: not-allowed !important;
+}
+
+/* Hide scrollbar by default */
+*::-webkit-scrollbar {
+  width: 0px;
+  transition: width 0.3s ease;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 6px;
+}
+
+/* Show scrollbar on hover */
+/* :hover::-webkit-scrollbar {
+  position: fixed;
+  right: 0px;
+  width: 12px;
+} */
+
+[data-slot="indicator"] {
+  /* Override HeroUI defaults */
+  transform: rotate(0deg) !important;
+}
+
+[data-slot="indicator"][data-open="true"] {
+  transform: rotate(-180deg) !important;
+}
