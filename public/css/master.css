@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 #Login {
-    @apply bg-red-500;
+    @apply bg-white;
     position: absolute;
     width: 100%;
     height: 100dvh;
@@ -63,9 +63,6 @@
     color: rgba(255, 255, 255, 1);
 }
 #Header {
-    @apply flex;
-    @apply justify-between;
-    @apply items-center;
     position: absolute;
     width: 100%;
     height: 94px;
@@ -75,6 +72,9 @@
     background-color: cadetblue;
 }
 #login_regis {
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
     position: absolute;
     width: 100%;
     height: 38px;
