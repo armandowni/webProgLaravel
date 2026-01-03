@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/var/www
     depends_on:
-      - mariadb
+      - mysql  # Changed from mariadb
     networks:
       - laravel
     command: php-fpm
@@ -31,14 +31,15 @@ services:
       - laravel
     restart: unless-stopped
 
-  mariadb:
-    image: mariadb:11.2
-    container_name: laravel_mariadb
+  mysql:
+    image: mysql:8.0
+    container_name: laravel_mysql
     environment:
       MYSQL_DATABASE: laraveldb
       MYSQL_USER: duckcanfly
       MYSQL_PASSWORD: duck4rm4nd0
       MYSQL_ROOT_PASSWORD: root
+    command: --default-authentication-plugin=mysql_native_password --innodb-buffer-pool-size=64M
     ports:
       - "3306:3306"
     volumes:
