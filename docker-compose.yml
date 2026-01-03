@@ -39,7 +39,7 @@ services:
       MYSQL_PASSWORD: duck4rm4nd0
       MYSQL_ROOT_PASSWORD: root
     # ADD --skip-name-resolve to the end of this line:
-    command: --default-authentication-plugin=mysql_native_password --innodb-buffer-pool-size=64M --innodb-log-file-size=32M --skip-name-resolve
+    command: --default-authentication-plugin=mysql_native_password --innodb-buffer-pool-size=64M --innodb-log-file-size=32M --skip-name-resolve --bind-address=0.0.0.0
     ports:
       - "3306:3306"
     volumes:
