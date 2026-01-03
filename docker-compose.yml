@@ -9,10 +9,11 @@ services:
     volumes:
       - .:/var/www
     depends_on:
-      - mysql  # Changed from mariadb
+      - mysql
     networks:
       - laravel
     command: php-fpm
+    restart: unless-stopped
 
   nginx:
     image: nginx:alpine
@@ -39,7 +40,7 @@ services:
       MYSQL_USER: duckcanfly
       MYSQL_PASSWORD: duck4rm4nd0
       MYSQL_ROOT_PASSWORD: root
-    command: --default-authentication-plugin=mysql_native_password --innodb-buffer-pool-size=64M
+    command: --default-authentication-plugin=mysql_native_password --innodb-buffer-pool-size=64M --innodb-log-file-size=32M
     ports:
       - "3306:3306"
     volumes:
