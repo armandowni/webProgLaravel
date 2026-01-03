@@ -43,7 +43,7 @@ services:
       --skip-name-resolve
       --bind-address=0.0.0.0
     ports:
-      - "3306:3306"
+      - "0.0.0.0:3306:3306"
     volumes:
       - dbdata:/var/lib/mysql
     networks:
