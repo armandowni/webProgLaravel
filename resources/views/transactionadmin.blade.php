@@ -5,46 +5,47 @@
     <div id="container_transactionadmin">
         <div class="tengah">
             @foreach($transaction as $t)
-                <div id="atas">
-                    <span>Transaction Date: {{$t->created_at}}</span><br>
-                    <span>Transaction Number: {{$t->transaction_done}}</span><br>
-                    <span>Buyer Name: {{$t->users->fullname}}</span><br>
+                <?php $total = 0; ?>
+                <div class="mb-8 p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800">
+                    <div class="mb-4">
+                        <span class="block text-lg font-bold text-blue-700 dark:text-blue-300">Transaction Date: {{$t->created_at}}</span>
+                        <span class="block text-sm text-gray-700 dark:text-gray-200">Transaction Number: {{$t->transaction_done}}</span>
+                        <span class="block text-sm text-gray-700 dark:text-gray-200">Buyer Name: {{$t->users->fullname}}</span>
+                    </div>
+                    <div class="overflow-x-auto rounded-lg shadow">
+                        <table class="min-w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs uppercase bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
+                                <tr>
+                                    <th class="px-4 py-3">Figure Picture</th>
+                                    <th class="px-4 py-3">Figure Name</th>
+                                    <th class="px-4 py-3">Quantity</th>
+                                    <th class="px-4 py-3">Price</th>
+                                    <th class="px-4 py-3">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white dark:bg-gray-800">
+                                @foreach($order as $o)
+                                    @if($o->transaction_done == $t->transaction_done and $o->id_user == $t->id_user)
+                                        <?php $total += $o->product_price * $o->order_quantity; ?>
+                                        <tr class="border-b dark:border-gray-700">
+                                            <td class="px-4 py-3"><img src="storage/{{$o->product_image}}" alt="Tidak memuat" class="w-16 h-16 object-cover rounded border border-gray-300"></td>
+                                            <td class="px-4 py-3">{{$o->product_name}}</td>
+                                            <td class="px-4 py-3">{{$o->order_quantity}}</td>
+                                            <td class="px-4 py-3">Rp. {{$o->product_price}}</td>
+                                            <td class="px-4 py-3 font-bold text-green-600">Rp. {{$o->product_price * $o->order_quantity}}</td>
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                            <tfoot class="bg-gray-50 dark:bg-gray-700">
+                                <tr>
+                                    <th colspan="4" class="px-4 py-3 text-right">Total</th>
+                                    <th class="px-4 py-3 font-bold text-green-600">Rp. {{$total}}</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
-                <table id="tabletransactionadmin" style="width: 97%; height: 350px;overflow: auto;display: block;">
-                    <tr>
-                        <th>Figure Picture</th>
-                        <th>Figure Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                    </tr>
-                    @foreach($order as $o)
-                        @if($o->transaction_done == $t->transaction_done and $o->id_user == $t->id_user)
-                            <tr>
-                                <th>
-                                    <img src="storage/{{$o->product_image}}" alt="Tidak memuat" style="border: 1px solid black;" width="100px" height="100px">
-                                </th>
-                                <th><span>{{$o->product_name}}"</span></th>
-                                <th><span>{{$o->order_quantity}}</span></th>
-                                <th><span>Rp. {{$o->product_price}}</span></th>
-                                <th><span>Rp. {{$o->product_price * $o->order_quantity}}</span></th>
-                            </tr>
-                        @endif
-                    @endforeach
-                    <tr>
-                        <th>
-                            <span>Total</span>
-                        </th>
-                        <th>
-                            @foreach($order as $o)
-                                @if($o->transaction_done == $t->transaction_done and $o->id_user == $t->id_user)
-                                @method($total += $o->product_price * $o->order_quantity)
-                                @endif
-                            @endforeach
-                                <span>Rp. {{$total}}</span>
-                        </th>
-                    </tr>
-                </table>
             @endforeach
         </div>
         <div class="pagination">

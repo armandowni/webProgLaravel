@@ -3,82 +3,92 @@
 @section('title', 'Update User')
 @section('content')
 
-<div id="containerInsert">
-    @if ($errors->any())
-        <div class="isa_error">
-            @foreach ($errors->all() as $error)
-                {{ $error }}
-            @endforeach
-        </div>
-    @endif
-        <form action="/updatemanageuser" method="post" enctype="multipart/form-data">
-            @csrf
-            <div id="Sign_Up" style="left:140px;">
-                <span>Update User</span>
+    <div class="flex justify-center items-center ">
+        <div class="w-full max-w-lg p-8 space-y-6 bg-white rounded-xl shadow-lg dark:bg-gray-800">
+            <div class="flex flex-col items-center">
+                <span class="text-3xl font-bold text-blue-700 dark:text-white mb-2">Update User</span>
+                <svg class="w-20 h-3 mb-4" fill="none" stroke="rgba(112,112,112,1)" stroke-width="2" viewBox="0 0 80 3">
+                    <rect x="0" y="0" width="80" height="3" rx="1.5" fill="rgba(112,112,112,0.1)" />
+                </svg>
             </div>
-            <div id="fullname" style="left: 29px">
-                    <div id="Fullname">
-                        <input type="text" name="fullname" placeholder="Fullname" value="{{$profile->fullname}}" style="width: 370px; height: 40px;">
-                    </div>
-            </div>
-            <div id="email1" style="top: 90px; left: 29px;">
-                    <div id="Email_address1">
-                            <input type="email" name="userEmail" placeholder="Email" value="{{$profile->email}}" style="width: 370px; height: 40px;">
-                    </div>
-            </div>
-            <div id="address1" style="top: 145px; left: 29px;">
-                    <div id="Password1">
-                        <input type="text" name="userAddress" placeholder="Address" value="{{$profile->address}}" style="width: 370px; height: 40px;">
-                    </div>
-            </div>
-            <div id="phone" style="top: 200px; left: 29px;">
-                <div id="phone1">
-                    <input type="text" name="userPhone" id="" placeholder="Phone Number" value="{{$profile->phone}}" style="width: 370px; height: 40px;">
+            @if ($errors->any())
+                <div class="mb-4 p-3 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800">
+                    <ul class="list-disc pl-5">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
-            </div>
-            <div id="gender" style="top: 250px; left: 29px;">
-                <div id="gender_A1_Text_6">
-                    <select name="userGender" style="width: 370px; height: 40px;">
-                        <option value="{{$profile->gender}}" >{{$profile->gender}}</option>
-                        @if($profile->gender == "Male"){
-                        <option value="Female">Female</option>
-                        }
-                        @else{
-                        <option value="Male">Male</option>
-                        }
+            @endif
+            <form action="/updatemanageuser" method="post" enctype="multipart/form-data" class="space-y-4">
+                @csrf
+                <div>
+                    <label for="fullname"
+                        class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Fullname</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Fullname"
+                        value="{{ $profile->fullname }}" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="userEmail"
+                        class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Email</label>
+                    <input type="email" name="userEmail" id="userEmail" placeholder="Email" value="{{ $profile->email }}"
+                        required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="userAddress"
+                        class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Address</label>
+                    <input type="text" name="userAddress" id="userAddress" placeholder="Address"
+                        value="{{ $profile->address }}" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="userPhone" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Phone
+                        Number</label>
+                    <input type="text" name="userPhone" id="userPhone" placeholder="Phone Number"
+                        value="{{ $profile->phone }}" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="userGender" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Gender</label>
+                    <select name="userGender" id="userGender" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="{{ $profile->gender }}">{{ $profile->gender }}</option>
+                        @if ($profile->gender == 'Male')
+                            <option value="Female">Female</option>
+                        @else
+                            <option value="Male">Male</option>
                         @endif
                     </select>
                 </div>
-            </div>
-            <div id="role" style="top: 150px; left: 20px;">
-                <div id="role">
-                    <select name="role" style="width: 370px; height: 40px;">
-                        <option value="{{$profile->role}}" >{{$profile->role}}</option>
-                            @if($profile->role == "Admin"){
+                <div>
+                    <label for="role" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Role</label>
+                    <select name="role" id="role" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="{{ $profile->role }}">{{ $profile->role }}</option>
+                        @if ($profile->role == 'Admin')
                             <option value="User">User</option>
-                            }
-                            @else{
+                        @else
                             <option value="Admin">Admin</option>
-                            }
-                            @endif
+                        @endif
                     </select>
                 </div>
-            </div>
-            <div class="Pp" style="top: 350px">
-                <div id="button_browse" class="button_browse">
-                    <div id="Browse___">
-                        <input type="file" name="userPic" accept="image/*">
-                    </div>
+                <div>
+                    <label for="userPic" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Profile
+                        Picture</label>
+                    <input type="file" name="userPic" id="userPic" accept="image/*"
+                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400">
                 </div>
-                <div id="pp">
-                    <span>Profile Picture</span>
-                </div>
-            </div>
-            <div id="btnregister">
-                <button type="submit" name="submitBtn" value="{{$profile->id_user}}">Update</button>
-            </div>        
-        </form>
-</div>
+                <button type="submit"
+                    class="flex items-center gap-2 px-5 py-2.5 text-white bg-blue-700 hover:bg-blue-800 rounded-lg font-medium focus:ring-2 focus:ring-blue-300 focus:outline-none transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v16h16V4H4zm4 8h8" />
+                    </svg>
+                    Update User
+                </button>
+            </form>
+        </div>
+    </div>
+
 @endsection
-
-

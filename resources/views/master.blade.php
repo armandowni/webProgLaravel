@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>Mimi Shop - @yield('title')</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         function startTime() {
             var today = new Date();
@@ -31,10 +30,11 @@
 
 <body onload="startTime()">
 
-    <div id="Login">
+    <div id="Login" class="h-full">
         <div id="Header" class="bg-blue-500 text-white py-3 px-5">
+
             <div id="login_regis" class="flex justify-between">
-                <div id="Mimi_Shop">
+                <div id="Mimi_Shop" class="text-xl">
                     <a href="/home">MimiShop</a>
                 </div>
                 @if (Session::get('role') == 'User')
@@ -58,6 +58,7 @@
                 @else
                     @if ($_SERVER['REQUEST_URI'] != '/register' && $_SERVER['REQUEST_URI'] != '/signin')
                         <div class="flex items-center gap-5">
+
                             <div id="Login_A0_Text_7">
                                 <a href="/signin">Login</a>
                             </div>
@@ -73,12 +74,11 @@
             </div>
         </div>
 
-        <div class="px-5 py-3">
-
+        <div class="px-5 py-3 h-full md:h-[89dvh] overflow-y-auto">
             @yield('content')
         </div>
 
-        <div id="Footer" style="bottom: 0%">
+        <div id="Footer" class="bg-blue-500 text-white py-3 px-5 text-center">
             <div id="ID2019_Copyright__Bluejack_17_">
                 <span>2019 Copyright: Bluejack 17-2</span>
             </div>

@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('flowbite');
 
 window.Vue = require('vue');
 
